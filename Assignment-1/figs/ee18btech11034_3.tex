@@ -1,0 +1,85 @@
+%\begin{figure}
+
+
+% The block diagram code is probably more verbose than necessary
+\begin{tikzpicture}[auto, node distance=3cm,>=latex']
+    % Controller
+    \node [draw,
+        minimum width=1cm,
+        minimum height=1cm
+    ]  (Element1) at (0,0) {$1$};
+    \node [draw,
+        minimum width=1cm,
+        minimum height=1cm,
+        right=0cm of Element1
+    ]  (Element2) {$2$};
+    \node [draw,
+        minimum width=1cm,
+        minimum height=1cm,
+        right=0cm of Element2
+    ]  (Element3) {$3$};
+    % Controller
+    \node [draw,
+        minimum width=1cm,
+        minimum height=1cm,
+	right=0cm of Element3
+    ]  (Element4) {$4$};
+    \node [draw,
+        minimum width=1cm,
+        minimum height=1cm,
+        right=0cm of Element4
+    ]  (Element5) {$5$};
+    \node [draw,
+        minimum width=1cm,
+        minimum height=1cm,
+        right=0cm of Element5
+    ]  (Element6) {$6$};
+    % Controller
+    \node [draw,
+        minimum width=1cm,
+        minimum height=1cm,
+	right=0cm of Element6
+    ]  (Element7) {$7$};
+    \node [draw,
+        minimum width=1cm,
+        minimum height=1cm,
+        right=0cm of Element7
+    ]  (Element8) {$8$};
+    \node [draw,
+        minimum width=1cm,
+        minimum height=1cm,
+        right=0cm of Element8
+    ]  (Element9) {$9$};
+    % Controller
+    \node [draw,
+        minimum width=1cm,
+        minimum height=1cm,
+	right=0cm of Element9
+    ]  (Element10) {$0$};
+    \node [draw,
+        minimum width=1cm,
+        minimum height=1cm,
+        right=0cm of Element10
+    ]  (Element11) {$1$};
+    \node [draw,
+        minimum width=1cm,
+        minimum height=1cm,
+        right=0cm of Element11
+    ]  (Element12) {$2$};
+    \node [draw,
+        minimum width=1cm,
+        minimum height=1cm,
+        right=0cm of Element12
+    ]  (Element13) {$5$};
+
+    
+    \node[draw,
+	minimum width=1cm,
+	minimum height=1cm,
+	below right = 1cm and -1.2cm of Element6
+    ]  (PointerIp) {$ip+1$};
+    \draw[-stealth] (PointerIp.north) -- (Element6.south)
+    node[midway,above]{};
+    
+\end{tikzpicture}
+%\end{figure
