@@ -41,6 +41,7 @@
     \usepackage{lscape}     
 \usepackage{multicol}
 \usepackage{chngcntr}
+\setcounter{MaxMatrixCols}{20}
 
 \DeclareMathOperator*{\Res}{Res}
 
@@ -220,4 +221,64 @@ The element pointed by pointer $ip+1$ is shown in Fig. \ref{fig:ee18btech11034_3
 
 So, now the above printf line prints the integer stored at the address, the pointer $ip+1$
 points in the terminal i.e., \textbf{6}.
+
+\section{Vector Form Approach}
+Consider the given array as a vector, multiplying it with another vector of same length having 0's and 1's. 
+The other vector have 0's at all indexes except at the required index.
+\\
+Element wise multiplication of two arrays gives the required output.\\
+The given pointer $ip$ gives the 4th index in $arr$.So the value $ip[1]$ i.e $(^{*}(ip+1))$ gives the 5th index in $arr$ i.e $\textbf{arr[5]}$\\
+
+Consider
+\\ 
+A = 
+\[
+	\begin{bmatrix}
+		1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 0 & 1 & 2 & 5
+	\end{bmatrix}
+\]
+B = 
+\[
+	\begin{bmatrix}
+		0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+	\end{bmatrix}
+\]
+\\
+Vector multiplication $AB^{T}$ gives \\
+\[
+	\begin{bmatrix}
+		1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 0 & 1 & 2 & 5
+	\end{bmatrix}
+	\begin{bmatrix}
+		0
+		\\
+		0
+		\\
+		0
+		\\
+		0
+		\\
+		0
+		\\
+		1
+		\\
+		0
+		\\
+		0
+		\\
+		0
+		\\
+		0
+		\\
+		0
+		\\
+		0
+		\\
+		0
+	\end{bmatrix}
+=
+	\begin{bmatrix}
+	6 
+	\end{bmatrix}
+\]
 \end{document}
