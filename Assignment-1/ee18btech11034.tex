@@ -223,7 +223,7 @@ So, now the above printf line prints the integer stored at the address, the poin
 points in the terminal i.e., \textbf{6}.
 
 \section{Vector Form Approach}
-Consider the given array as a vector A, multiplying it with another vector of same length having 0's and 1's. 
+Consider the given array as a vector $arr$, multiplying it with another vector of same length having 0's and 1's. 
 The other vector have 0's at all indexes except at the required index.
 \\
 Consider the identity matrix I of size $nxn$
@@ -296,11 +296,18 @@ Hence the column unit vector $e_{i}$ has value 1 at ith place (index) and 0's at
 \\
 The given pointer $ip$ gives the 4th index in $arr$.So the value $ip[1]$ i.e $(^{*}(ip+1))$ gives the 5th index in $arr$ i.e $\textbf{arr[5]}$
 \\
-Element wise multiplication (inner product) of two vectors A and $e_{5}$ gives the required output.
+Element wise multiplication (inner product) of two vectors $arr$ and $e_{5}$ gives the required output.
 \\
-
+\begin{align}
+arr[i] = arr^{T}e_{i}
+\end{align}
+So 
+\begin{align}
+arr[5] = arr^{T}e_{5}
+\end{align}
+\\
 \[
-	A = 
+	arr = 
 	\begin{bmatrix}
 		1 
 		\\
@@ -360,7 +367,7 @@ $$
 	\end{bmatrix}
 $$
 \\
-Vector multiplication of A and $e_{5}$ i.e $A^{T}e_{5}$ gives \\
+Vector multiplication of $arr$ and $e_{5}$ i.e $arr^{T}e_{5}$ gives \\
 \[
 	\begin{bmatrix}
 		1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 0 & 1 & 2 & 5
